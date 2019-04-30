@@ -1,0 +1,9 @@
+<h1><%= @artist.name %></h1>
+
+<!-- Add code here to list a category's posts. -->
+<ul>
+  <% @artist.songs.each do |s| %>
+    <li><%= link_to s.title, song_path(s) %></li>
+  <% end %>
+  <p><%= @artist.song_count %> songs</p>
+</ul>

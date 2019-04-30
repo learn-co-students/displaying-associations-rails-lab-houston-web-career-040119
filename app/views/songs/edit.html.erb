@@ -1,4 +1,4 @@
-<h1>Editing <%= @song.name %></h1>
+<h1>Editing <%= @song.title %></h1>
 
 <%= form_for @song  do |f| %>
   <%= f.label :title %>
@@ -7,5 +7,7 @@
 
   <%= f.submit %>
 <% end %>
-
-
+<br>
+<%= form_for(@song, method: :destory) do |f| %>
+  <%= f.submit "Delete Song" %>
+<%end%>
